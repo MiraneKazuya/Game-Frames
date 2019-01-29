@@ -4,10 +4,10 @@ import java.awt.event.KeyListener;
 
 public class MainFrame extends JFrame implements KeyListener{
 
-	 MainDraw gameDraw;
+	MainDraw gameDraw;
 
 	public MainFrame(){
-			this.gameDraw = new MainDraw();
+		this.gameDraw = new MainDraw();
 	}
 
 	public void keyPressed(KeyEvent e){
@@ -30,10 +30,49 @@ public class MainFrame extends JFrame implements KeyListener{
 			gameDraw.moveDown();
 			System.out.println("Position: " + gameDraw.x + ", " + gameDraw.y);
 		}
+		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+			gameDraw.jump();
+		}	
+		else if(e.getKeyCode() == KeyEvent.VK_A){
+			gameDraw.bowing();
+		}	
+		else if(e.getKeyCode() == KeyEvent.VK_S){
+			gameDraw.bowingTwo();
+		}	
 	}
 
 	public void keyReleased(KeyEvent e){
-		
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+			gameDraw.idleBruh = true;
+			gameDraw.idleAnimation();
+		}
+
+		else if(e.getKeyCode() == KeyEvent.VK_LEFT){
+			gameDraw.idleBruh = true;
+			gameDraw.idleAnimation();
+		}
+
+		else if(e.getKeyCode() == KeyEvent.VK_UP){
+			gameDraw.idleBruh = true;
+			gameDraw.idleAnimation();
+		}
+
+		else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+			gameDraw.idleBruh = true;
+			gameDraw.idleAnimation();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+			gameDraw.idleBruh = true;
+
+		}	
+		else if(e.getKeyCode() == KeyEvent.VK_A){
+			gameDraw.idleBruh = true;
+			
+		}	
+		else if(e.getKeyCode() == KeyEvent.VK_S){
+			gameDraw.idleBruh = true;
+			
+		}	
 	}
 
 	public void keyTyped(KeyEvent e){

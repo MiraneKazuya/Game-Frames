@@ -169,7 +169,7 @@ public class MainDraw extends JComponent{
 							
 							try{
 								image = ImageIO.read(resource);
-								Thread.sleep(1000/30);
+								Thread.sleep(1000/20);
 							}catch(IOException e){
 								e.printStackTrace();
 							}catch(InterruptedException e){

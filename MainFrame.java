@@ -63,15 +63,15 @@ public class MainFrame extends JFrame implements KeyListener{
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
 			gameDraw.idleBruh = true;
-
+			gameDraw.idleAnimation();
 		}	
 		else if(e.getKeyCode() == KeyEvent.VK_A){
-			gameDraw.idleBruh = true;
+			gameDraw.idleBruh = true;	
 			
 		}	
 		else if(e.getKeyCode() == KeyEvent.VK_S){
 			gameDraw.idleBruh = true;
-			
+		
 		}	
 	}
 
